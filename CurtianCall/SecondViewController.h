@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SecondViewController : UIViewController {
-    
+@interface SecondViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+    IBOutlet UITableView *table;   
 }
 
 @end
