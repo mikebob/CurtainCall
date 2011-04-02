@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5A48D113474A3400756C82 /* contributors.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF5A48D013474A3400756C82 /* contributors.txt */; };
 		AFDDF19A134393530006E46E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDDF199134393530006E46E /* UIKit.framework */; };
 		AFDDF19C134393530006E46E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDDF19B134393530006E46E /* Foundation.framework */; };
 		AFDDF19E134393530006E46E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDDF19D134393530006E46E /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF5A48D013474A3400756C82 /* contributors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = contributors.txt; sourceTree = "<group>"; };
 		AFDDF195134393530006E46E /* CurtianCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtianCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDDF199134393530006E46E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFDDF19B134393530006E46E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,7 @@
 		AFDDF19F134393530006E46E /* CurtianCall */ = {
 			isa = PBXGroup;
 			children = (
+				AF5A48D013474A3400756C82 /* contributors.txt */,
 				AFDDF1A8134393530006E46E /* CurtianCallAppDelegate.h */,
 				AFDDF1A9134393530006E46E /* CurtianCallAppDelegate.m */,
 				AFDDF1AB134393530006E46E /* MainWindow.xib */,
@@ -119,6 +122,7 @@
 				AFDDF191134393530006E46E /* Sources */,
 				AFDDF192134393530006E46E /* Frameworks */,
 				AFDDF193134393530006E46E /* Resources */,
+				AF5A48CE134742A300756C82 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -163,10 +167,27 @@
 				AFDDF1AD134393530006E46E /* MainWindow.xib in Resources */,
 				AFDDF1B6134393530006E46E /* FirstView.xib in Resources */,
 				AFDDF1B9134393530006E46E /* SecondView.xib in Resources */,
+				AF5A48D113474A3400756C82 /* contributors.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF5A48CE134742A300756C82 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git log --pretty=format:\"%an\" | uniq > ${PRODUCT_NAME:rfc1034identifier}/contributors.txt";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFDDF191134393530006E46E /* Sources */ = {
@@ -297,6 +318,7 @@
 				AFDDF1BE134393530006E46E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
