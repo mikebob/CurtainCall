@@ -185,7 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "git log --pretty=format:\"%an\" | uniq > ${PRODUCT_NAME:rfc1034identifier}/contributors.txt";
+			shellScript = "./getcontributors ${PRODUCT_NAME:rfc1034identifier}/contributors.txt";
 		};
 /* End PBXShellScriptBuildPhase section */
 
