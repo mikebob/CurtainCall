@@ -11,13 +11,20 @@
 
 @implementation SecondViewController
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"contributors" ofType:@"txt"];
+    NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSMacOSRomanStringEncoding error:NULL];
+    
+    NSArray *wordListArray = [[NSArray alloc] initWithArray:[fileContents componentsSeparatedByString:@"\n"]];
+    
+    NSLog(@"%@", wordListArray);
 }
-*/
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
